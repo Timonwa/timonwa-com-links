@@ -10,8 +10,8 @@ function Home() {
         url={siteConfig?.url}
         title={siteConfig?.title}
         description={siteConfig?.description}
-        imageUrl={siteConfig?.cover_image}
-        imageAlt={siteConfig?.cover_image_alt}
+        // imageUrl={siteConfig?.cover_image}
+        // imageAlt={siteConfig?.cover_image_alt}
       />
       <Content />
     </Fragment>
