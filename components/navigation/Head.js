@@ -17,6 +17,10 @@ const DocHead = (props) => (
     <meta name="title" content={props?.title} />
     <meta name="description" content={props?.description} />
     <meta
+      name="type"
+      content={props?.type === "article" ? "article" : "website"}
+    />
+    <meta
       name="author"
       content={props?.author ? props?.author : siteConfig?.author}
     />
@@ -58,9 +62,6 @@ const DocHead = (props) => (
 
     {/* canonical url */}
     {props?.canonicalUrl && <link rel="canonical" href={props?.canonicalUrl} />}
-    {props?.canonicalUrl && props?.type === "Publications" && (
-      <meta name="robots" content="noindex" />
-    )}
   </Head>
 );
 
