@@ -29,9 +29,9 @@ function Content() {
           </div>
 
           <div className={styles.userDescription}>
-            <h1 className={styles.userDescriptionTitle}>Timonwa Akintokun</h1>
+            <h1 className={styles.userDescriptionTitle}>Timonwa</h1>
             <p className={styles.userDescriptionBody}>
-              Content Creator, Tech Sis
+              Finding the laughter in chaos
             </p>
           </div>
 
@@ -94,7 +94,7 @@ function Content() {
             </Link>
             <Link
               className={styles.userSocialsLink}
-              href="mailto:me@timonwa.com"
+              href="mailto:creator@timonwa.com"
               target="_blank"
               rel="noopener"
             >

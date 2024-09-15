@@ -1,13 +1,8 @@
 export const creativeGoodiesData = [
   {
     image: "/images/icons/notion.svg",
-    name: "Get free Notion templates to help you maximize your productivity, organize tasks, and fuel your creativity.",
+    name: "Get Free Notion Templates to Stay Organized & Productive!",
     link: "https://buymeacoffee.com/timonwa/extras",
-  },
-  {
-    image: "/images/icons/tech-roadmap.png",
-    name: "New into Tech? Choose a career path and get free resources here",
-    link: "https://roadmaps.timonwa.com",
   },
 ];
 
@@ -46,13 +41,13 @@ export const creativeSocialsLinks = [
 
 export const creativeExploreLinks = [
   {
-    image: "/images/icons/pels-diary.png",
-    name: "Explore my Poetry/Thoughts",
-    link: "https://timonwa.com/diary",
+    image: "/images/icons/signedt.png",
+    name: "Explore my thoughts on my personal blog",
+    link: "https://timonwa.substack.com",
   },
   {
     image: "/images/icons/instagram-color.png",
-    name: "Explore my Artworks",
+    name: "Some of my art",
     link: "https://instagram.com/timonwa_loves_art",
   },
 ];
@@ -71,7 +66,7 @@ export const creativeOthersLinks = [
   {
     image: "/images/icons/email-creative.svg",
     name: "Send me an email",
-    link: "mailto:me@timonwa.com",
+    link: "mailto:creative@timonwa.com",
   },
   // {
   //   image: "/images/icons/camera-creative.svg",
