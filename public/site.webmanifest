@@ -1,6 +1,6 @@
 {
-  "background_color": "#FEFFEF",
-  "description": "Timonwa: Frontend Engineer, Technical Writer, Content Creator. Passionate about user experiences, open-source, and community involvement.",
+  "background_color": "#f5eff8",
+  "description": "👩🏽‍💻 Tech sis | Introvert 💭 | Weirdo 👻. Trying to find the laughter in chaos",
   "display": "standalone",
   "icons": [
     {
@@ -23,5 +23,5 @@
   "scope": "/",
   "short_name": "Timonwa Akintokun",
   "start_url": "/",
-  "theme_color": "#D4BA9B"
+  "theme_color": "#7c5b83"
 }

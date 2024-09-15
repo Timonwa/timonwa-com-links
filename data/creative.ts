@@ -47,7 +47,7 @@ export const creativeExploreLinks = [
   },
   {
     image: "/images/icons/instagram-color.png",
-    name: "Some of my art",
+    name: "Some of my art on Instagram",
     link: "https://instagram.com/timonwa_loves_art",
   },
 ];

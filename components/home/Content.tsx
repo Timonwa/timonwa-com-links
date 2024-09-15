@@ -31,7 +31,8 @@ function Content() {
           <div className={styles.userDescription}>
             <h1 className={styles.userDescriptionTitle}>Timonwa</h1>
             <p className={styles.userDescriptionBody}>
-              Finding the laughter in chaos
+              👩🏽‍💻 Tech sis | Introvert 💭 | Weirdo 👻 <br />
+              Trying to find the laughter in chaos
             </p>
           </div>
 

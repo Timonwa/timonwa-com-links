@@ -1,11 +1,10 @@
 export const siteConfig = {
   url: "https://creative.timonwa.com",
-  title: "Timonwa Akintokun: Content Creation, Productivity, Tech",
-  sub_title: "Timonwa Akintokun: Content Creation, Productivity, Tech",
+  title: "Timonwa Akintokun",
   description:
-    "Explore curated links for content creation, productivity, and more.",
+    "👩🏽‍💻 Tech sis | Introvert 💭 | Weirdo 👻. Trying to find the laughter in chaos",
   author: "Timonwa Akintokun",
   cover_image: "https://creative.timonwa.com/seo-image.png",
-  cover_image_alt: "Timonwa Akintokun: Content Creation, Productivity, Tech",
+  cover_image_alt: "Timonwa Akintokun",
   twitter: "@timonwa_",
 };
