@@ -1,3 +1,30 @@
+export const socialMediaLinks = [
+  {
+    href: "https://twitter.com/timonwa_",
+    icon: "/images/icons/twitter-creative.svg",
+    alt: "Twitter",
+  },
+  {
+    href: "https://www.instagram.com/timonwa_",
+    icon: "/images/icons/instagram-creative.svg",
+    alt: "Instagram",
+  },
+  {
+    href: "https://www.tiktok.com/@timonwa_",
+    icon: "/images/icons/tiktok-creative.svg",
+    alt: "TikTok",
+  },
+  {
+    href: "https://youtube.com/@timonwa",
+    icon: "/images/icons/youtube-creative.svg",
+    alt: "YouTube",
+  },
+  {
+    href: "mailto:creator@timonwa.com",
+    icon: "/images/icons/email-creative.svg",
+    alt: "Email",
+  },
+];
 export const creativeGoodiesData = [
   {
     image: "/images/icons/notion.svg",
@@ -73,4 +100,11 @@ export const creativeOthersLinks = [
   //   name: "View my press kit",
   //   link: "https://timonwa.com/presskit",
   // },
+];
+
+export const sections = [
+  { title: "Goodies", data: creativeGoodiesData },
+  { title: "Social Handles", data: creativeSocialsLinks },
+  { title: "More about Me", data: creativeExploreLinks },
+  { title: "Other Links", data: creativeOthersLinks },
 ];
