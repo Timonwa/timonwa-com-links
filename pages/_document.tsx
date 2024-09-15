@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config";
 import { Head, Html, Main, NextScript } from "next/document";
 import { Fragment } from "react";
 
@@ -20,7 +21,7 @@ export default function Document() {
           <Fragment>
             <script
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.google_analytics}`}
             />
             <script
               dangerouslySetInnerHTML={{
@@ -28,7 +29,7 @@ export default function Document() {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                  gtag('config', '${siteConfig.google_analytics}', {
                     page_path: window.location.pathname,
                   });
                 `,

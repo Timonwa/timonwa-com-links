@@ -7,4 +7,5 @@ export const siteConfig = {
   cover_image: "https://creative.timonwa.com/seo-image.png",
   cover_image_alt: "Timonwa Akintokun",
   twitter: "@timonwa_",
+  google_analytics: "G-WMK0Y3NTTP",
 };
