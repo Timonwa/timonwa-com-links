@@ -1,0 +1,32 @@
+{
+  "name": "timonwa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "next": "14.2.4",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "rss": "^1.2.2",
+    "sass": "^1.69.5",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/rss": "^0.0.32",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.2",
+    "prettier": "^2.8.7",
+    "typescript": "^5"
+  }
+}

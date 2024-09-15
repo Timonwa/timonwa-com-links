@@ -1,0 +1,27 @@
+{
+  "background_color": "#FEFFEF",
+  "description": "Timonwa: Frontend Engineer, Technical Writer, Content Creator. Passionate about user experiences, open-source, and community involvement.",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "Timonwa Akintokun",
+  "scope": "/",
+  "short_name": "Timonwa Akintokun",
+  "start_url": "/",
+  "theme_color": "#D4BA9B"
+}
