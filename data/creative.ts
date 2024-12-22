@@ -2,39 +2,40 @@ export const socialMediaLinks = [
   {
     href: "https://twitter.com/timonwa_",
     icon: "/images/icons/twitter-creative.svg",
-    alt: "Twitter",
+    alt: "Twitter handle",
   },
   {
     href: "https://www.instagram.com/timonwa_",
     icon: "/images/icons/instagram-creative.svg",
-    alt: "Instagram",
+    alt: "Instagram handle",
   },
   {
     href: "https://www.tiktok.com/@timonwa_",
     icon: "/images/icons/tiktok-creative.svg",
-    alt: "TikTok",
+    alt: "TikTok handle",
   },
   {
     href: "https://youtube.com/@timonwa",
     icon: "/images/icons/youtube-creative.svg",
-    alt: "YouTube",
+    alt: "YouTube handle",
   },
   {
     href: "https://www.linkedin.com/in/timonwa/",
     icon: "/images/icons/linkedin-creative.svg",
-    alt: "LinkedIn",
+    alt: "LinkedIn handle",
   },
   {
     href: "https://www.threads.net/@timonwa_",
     icon: "/images/icons/threads-creative.svg",
-    alt: "Threads",
+    alt: "Threads handle",
   },
   {
     href: "mailto:creator@timonwa.com",
     icon: "/images/icons/email-creative.svg",
-    alt: "Email",
+    alt: "Email address",
   },
 ];
+
 export const creativeGoodiesData = [
   {
     image: "/images/icons/notion.svg",
