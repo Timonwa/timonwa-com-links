@@ -25,10 +25,10 @@ function Content() {
           <div className={styles.userDescription}>
             <h1 className={styles.userDescriptionTitle}>Timonwa</h1>
             <p className={styles.userDescriptionBody}>
+              Trying to find the laughter in chaos <br />
               <span aria-label="Tech sis">👩🏽‍💻 Tech sis</span> |{" "}
               <span aria-label="Introvert">💭 Introvert</span> |{" "}
-              <span aria-label="Weirdo">👻 Weirdo</span> <br />
-              Trying to find the laughter in chaos
+              <span aria-label="Weirdo">👻 Weirdo</span>
             </p>
           </div>
 
@@ -42,11 +42,13 @@ function Content() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${social.alt} profile`}
+                  title={social.alt}
                 >
                   <Image
                     className={styles.userSocialsIcon}
                     src={social.icon}
-                    alt=""
+                    alt={social.alt}
+                    title={social.alt}
                     width={25}
                     height={25}
                   />
@@ -105,7 +107,7 @@ function Content() {
           <p>
             Built by{" "}
             <Link
-              href="https://timonwa.com"
+              href="https://tech.timonwa.com"
               target="_blank"
               rel="noopener noreferrer"
             >
