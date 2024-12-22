@@ -41,7 +41,6 @@ function Content() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`${social.alt} profile`}
                   title={social.alt}
                 >
                   <Image
