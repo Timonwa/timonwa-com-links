@@ -22,8 +22,8 @@ function Content() {
     StoreLinks,
     // ProjectLinks,
     TalksMediaLinks,
-    OtherLinks,
     TippingLinks,
+    OtherLinks,
     SocialMediaLinks,
   ];
 
@@ -38,7 +38,6 @@ function Content() {
               alt={LinkHubIntro.name}
               width={150}
               height={150}
-              // placeholder="blur"
             />
           </div>
 
@@ -113,7 +112,7 @@ function Content() {
                       </span>
                       <Image
                         className={styles.sectionLinkIcon}
-                        src="/images/icons/external-link-creative.svg"
+                        src="/images/icons/ext-link-icon.svg"
                         alt="External link"
                         width={11.33}
                         height={12.9}
@@ -137,7 +136,7 @@ function Content() {
               Timonwa
             </Link>{" "}
             <Image
-              src="/images/icons/copy-creative.svg"
+              src="/images/icons/copy-icon.svg"
               className={styles.icon}
               alt=""
               width={30}

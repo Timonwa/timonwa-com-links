@@ -23,27 +23,27 @@ export const IntroLinks: LinkSections = {
     {
       name: "LinkedIn profile",
       href: "https://www.linkedin.com/in/timonwa/",
-      icon: "/images/icons/linkedin-creative.svg",
+      icon: "/images/icons/linkedin-icon.svg",
     },
     {
       name: "Twitter profile",
       href: "https://twitter.com/timonwa_",
-      icon: "/images/icons/twitter-creative.svg",
+      icon: "/images/icons/twitter-icon.svg",
     },
     {
       name: "Instagram profile",
       href: "https://www.instagram.com/timonwa_",
-      icon: "/images/icons/instagram-creative.svg",
+      icon: "/images/icons/instagram-icon.svg",
     },
     // {
     //   name: "TikTok profile",
     //   href: "https://www.tiktok.com/@timonwa_",
-    //   icon: "/images/icons/tiktok-creative.svg",
+    //   icon: "/images/icons/tiktok-icon.svg",
     // },
     {
       name: "YouTube profile",
       href: "https://youtube.com/@timonwa",
-      icon: "/images/icons/youtube-creative.svg",
+      icon: "/images/icons/youtube-icon.svg",
     },
     {
       name: "GitHub profile",
@@ -53,15 +53,17 @@ export const IntroLinks: LinkSections = {
     {
       name: "Email address",
       href: "mailto:me@timonwa.com",
-      icon: "/images/icons/email-creative.svg",
+      icon: "/images/icons/email-icon.svg",
     },
   ],
 };
 
 export const PortfolioLinks: LinkSections = {
-  title: "💼 Projects & Entrepreneurial Journey",
+  // title: "💼 Projects & Entrepreneurial Journey",
+  title: "💼 Developer Portfolio",
   description:
-    "Browse my app portfolio and a timeline of startups, side projects, and creative ventures I've worked on.",
+    // "Browse my app portfolio and a timeline of startups, side projects, and creative ventures I've worked on.",
+    "Browse my app portfolio, side projects, and creative ventures I've worked on.",
   links: [
     {
       name: "🌐 Tech Portfolio Website",
