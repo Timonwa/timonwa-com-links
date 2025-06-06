@@ -1,6 +1,7 @@
 import styles from "@/styles/styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 import {
   LinkHubIntro,
   IntroLinks,
@@ -15,21 +16,76 @@ import {
 } from "@/data/creative";
 
 function Content() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Add section IDs for scroll functionality
   const allSections = [
-    PortfolioLinks,
-    BlogLinks,
-    StoreLinks,
-    // ProjectLinks,
-    TalksMediaLinks,
-    TippingLinks,
-    OtherLinks,
-    SocialMediaLinks,
+    { ...PortfolioLinks, id: "portfolio" },
+    { ...BlogLinks, id: "blogs" },
+    { ...StoreLinks, id: "store" },
+    { ...TalksMediaLinks, id: "talks" },
+    { ...TippingLinks, id: "support" },
+    { ...OtherLinks, id: "other" },
+    { ...SocialMediaLinks, id: "social" },
   ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <div className={styles.creative}>
       <div className={styles.wrapper}>
+        {/* Add the floating menu button and dropdown */}
+        <div className={styles.floatingMenu} ref={menuRef}>
+          <button
+            className={styles.menuButton}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label="Navigation menu"
+          >
+            <Image
+              src="/images/icons/menu-icon.svg"
+              alt=""
+              width={24}
+              height={24}
+            />
+          </button>
+
+          {isMenuOpen && (
+            <div className={styles.dropdown}>
+              {allSections.map((section) => (
+                <button
+                  key={section.id}
+                  className={styles.dropdownItem}
+                  onClick={() => scrollToSection(section.id)}
+                >
+                  {section.title}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         <header>
           <div className={styles.userHeadshot}>
             <Image
@@ -75,9 +131,10 @@ function Content() {
         </header>
 
         <main>
-          {allSections.map((section, index) => (
+          {allSections.map((section) => (
             <section
-              key={index}
+              key={section.id}
+              id={section.id}
               className={
                 styles[
                   `${section.title
