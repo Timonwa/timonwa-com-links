@@ -1,3 +1,3 @@
-# My Creative Career Link Hub
+# My Links Hub
 
-The webpage is a simple one-page website that showcases my creative career links.
+The webpage is a simple one-page website that showcases all my links.
