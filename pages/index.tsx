@@ -1,21 +1,61 @@
-import { siteConfig } from "@/config";
-import Content from "@/components/home/Content";
-import { Fragment } from "react";
 import DocHead from "@/components/navigation/Head";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingMenu } from "@/components/layout/FloatingMenu";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { NewslettersSection } from "@/components/sections/NewslettersSection";
+import { ToolsSection } from "@/components/sections/ToolsSection";
+import { BlogSection } from "@/components/sections/BlogSection";
+import { ShopSection } from "@/components/sections/ShopSection";
+import { SupportSection } from "@/components/sections/SupportSection";
+import { PressKitSection } from "@/components/sections/PressKitSection";
+import { AffiliatesSection } from "@/components/sections/AffiliatesSection";
+import {
+  SITE_URL,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_COVER_IMAGE,
+} from "@/config";
+import styles from "@/styles/home.module.scss";
 
-function Home() {
+const MENU_ITEMS = [
+  { id: "newsletters", label: "Newsletters" },
+  { id: "tools", label: "Tools" },
+  { id: "blog", label: "Blog & Writing" },
+  { id: "shop", label: "Shop" },
+  { id: "support", label: "Support" },
+  { id: "press", label: "Talks & Press Kit" },
+  { id: "affiliates", label: "Affiliates" },
+];
+
+export default function Home() {
   return (
-    <Fragment>
+    <>
       <DocHead
-        url={siteConfig?.url}
-        title={siteConfig?.title}
-        description={siteConfig?.description}
-        // imageUrl={siteConfig?.cover_image}
-        // imageAlt={siteConfig?.cover_image_alt}
+        url={SITE_URL}
+        title={SITE_TITLE}
+        description={SITE_DESCRIPTION}
+        imageUrl={SITE_COVER_IMAGE}
+        imageAlt={SITE_TITLE}
       />
-      <Content />
-    </Fragment>
+      <div className={styles.floatingControls}>
+        <ThemeToggle />
+      </div>
+      <FloatingMenu items={MENU_ITEMS} />
+
+      <div className={styles.page}>
+        <Header />
+        <main>
+          <NewslettersSection />
+          <ToolsSection />
+          <BlogSection />
+          <ShopSection />
+          <SupportSection />
+          <PressKitSection />
+          <AffiliatesSection />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
-
-export default Home;

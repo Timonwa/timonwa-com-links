@@ -3,7 +3,4 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://creative.timonwa.com
-
-# Sitemaps
-Sitemap: https://creative.timonwa.com/sitemap.xml
+Host: https://links.timonwa.com

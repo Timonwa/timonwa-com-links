@@ -1,8 +1,0 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Purple Background -->
-  <rect width="20" height="20" fill="#7c5b83" rx="4"/>
-  <!-- Envelope Body -->
-  <rect x="3" y="5" width="14" height="10" fill="white" rx="1"/>
-  <!-- Envelope Flap -->
-  <path d="M3 5L10 11L17 5" stroke="#7c5b83" stroke-width="1.5" fill="none"/>
-</svg>

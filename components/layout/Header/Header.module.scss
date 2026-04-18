@@ -1,0 +1,46 @@
+@use "@/styles/tokens" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-lg;
+  text-align: center;
+  padding: $space-2xl 0 $space-xl;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  max-width: 32rem;
+}
+
+.name {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.tagline {
+  font-size: $font-size-md;
+  color: var(--accent);
+  font-weight: $font-weight-medium;
+  margin: 0;
+}
+
+.bio {
+  font-size: $font-size-base;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-sm;
+  max-width: 100%;
+}

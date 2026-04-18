@@ -1,0 +1,21 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins" as *;
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-round;
+  color: var(--text);
+  @include glass;
+  transition: transform $transition-base, color $transition-base,
+    border-color $transition-base;
+  @include focus-ring;
+
+  &:hover {
+    color: var(--accent);
+    transform: rotate(-15deg);
+  }
+}

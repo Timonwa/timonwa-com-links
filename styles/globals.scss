@@ -1,33 +1,126 @@
-// ! Timonwa CSS Reset
-// ! ===== Resets for all pages (Start) =====
-// * all elements
+// Reset + theme variables. Design tokens live in tokens.scss.
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-// * to ensure that when you click on an id link, the header will not cover the beginning of the content the id is pointing to
 [id] {
-  scroll-margin-top: 7rem;
+  scroll-margin-top: 5rem;
 }
 
-//* to smoothly animate the scroll from one place to another place
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
 
-// * any element that has part of its contents overflowing the body container, will have that part hidden on the screen
 body {
   overflow-x: hidden;
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-family, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
-// * reset the link states to the page's main color and no decoration
+// Decorative colored blobs for the backdrop — give the glass something to blur.
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.7;
+  will-change: transform;
+  transition: background 250ms ease-in-out;
+}
+
+body::before {
+  top: -15vh;
+  left: -15vw;
+  width: 55vw;
+  height: 55vw;
+  background: var(--blob-1);
+  animation: drift-a 22s ease-in-out infinite alternate;
+}
+
+body::after {
+  bottom: -20vh;
+  right: -15vw;
+  width: 50vw;
+  height: 50vw;
+  background: var(--blob-2);
+  animation: drift-b 26s ease-in-out infinite alternate;
+}
+
+// Tertiary blob via html::after so we can have 3 without DOM changes.
+html::after {
+  content: "";
+  position: fixed;
+  top: 35vh;
+  left: 35vw;
+  width: 45vw;
+  height: 45vw;
+  border-radius: 50%;
+  background: var(--blob-3);
+  filter: blur(110px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+  will-change: transform;
+  animation: drift-c 30s ease-in-out infinite alternate;
+  transition: background 250ms ease-in-out;
+}
+
+@keyframes drift-a {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(8vw, 6vh) scale(1.15);
+  }
+}
+
+@keyframes drift-b {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-8vw, -5vh) scale(1.1);
+  }
+}
+
+@keyframes drift-c {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-6vw, 8vh) scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  html::after {
+    animation: none;
+  }
+}
+
+// Make sure all page content stacks above the blobs.
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
 a,
 a:link,
 a:hover,
@@ -37,18 +130,93 @@ a:visited {
   color: currentColor;
 }
 
-// * remove bullets from list items and position them well
 ul {
   list-style: none;
-  list-style-position: unset;
 }
-// ! ===== Resets for all pages (End) =====
 
-// ! ==== Variables (Start) ====
-:root {
-  --black: #434141;
-  --muted-purple: #7c5b83;
-  --soft-overlay: #fafaf7;
-  --light-purple: #f5eff8;
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
 }
-// ! ==== Variables (End) ====
+
+// Brand palette — do not change these base hex values.
+:root {
+  --brand-black: #434141;
+  --brand-purple: #7c5b83;
+  --brand-overlay: #fafaf7;
+  --brand-lilac: #f5eff8;
+}
+
+// Light theme (default) — varied lilac backdrop so glass blur has something to show.
+:root,
+[data-theme="light"] {
+  --bg: #ede4f1;
+  --blob-1: radial-gradient(circle, #7c5b83 0%, rgba(124, 91, 131, 0) 70%);
+  --blob-2: radial-gradient(circle, #fafaf7 0%, rgba(250, 250, 247, 0) 70%);
+  --blob-3: radial-gradient(circle, #b9a1c0 0%, rgba(185, 161, 192, 0) 70%);
+
+  --text: #3a3638;
+  --text-muted: #6b6468;
+  --accent: #7c5b83;
+  --accent-strong: #6a4a71;
+  --accent-soft: rgba(124, 91, 131, 0.14);
+
+  --card-bg: rgba(250, 250, 247, 0.18);
+  --card-border: rgba(124, 91, 131, 0.18);
+
+  --glass-bg: rgba(250, 250, 247, 0.14);
+  --glass-border: rgba(250, 250, 247, 0.45);
+  --glass-shadow: 0 10px 32px rgba(124, 91, 131, 0.12);
+
+  --hover-shadow: 0 14px 32px rgba(124, 91, 131, 0.22);
+
+  --note-bg: rgba(124, 91, 131, 0.08);
+  --note-border: rgba(124, 91, 131, 0.22);
+
+  --avatar-ring: rgba(124, 91, 131, 0.2);
+
+  --featured-gradient: linear-gradient(
+    135deg,
+    rgba(124, 91, 131, 0.35) 0%,
+    rgba(245, 239, 248, 0.2) 50%,
+    rgba(124, 91, 131, 0.3) 100%
+  );
+}
+
+// Dark theme — deep plum backdrop, softer accent.
+[data-theme="dark"] {
+  --bg: #15101a;
+  --blob-1: radial-gradient(circle, #7c5b83 0%, rgba(124, 91, 131, 0) 70%);
+  --blob-2: radial-gradient(circle, #3d2847 0%, rgba(61, 40, 71, 0) 70%);
+  --blob-3: radial-gradient(circle, #5a3d65 0%, rgba(90, 61, 101, 0) 70%);
+
+  --text: #e8dfec;
+  --text-muted: #9b8fa2;
+  --accent: #b092b8;
+  --accent-strong: #c9a7d1;
+  --accent-soft: rgba(176, 146, 184, 0.16);
+
+  --card-bg: rgba(40, 28, 46, 0.35);
+  --card-border: rgba(176, 146, 184, 0.18);
+
+  --glass-bg: rgba(30, 20, 36, 0.3);
+  --glass-border: rgba(176, 146, 184, 0.2);
+  --glass-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+
+  --hover-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
+
+  --note-bg: rgba(176, 146, 184, 0.1);
+  --note-border: rgba(176, 146, 184, 0.25);
+
+  --avatar-ring: rgba(176, 146, 184, 0.3);
+
+  --featured-gradient: linear-gradient(
+    135deg,
+    rgba(124, 91, 131, 0.5) 0%,
+    rgba(30, 20, 36, 0.2) 50%,
+    rgba(176, 146, 184, 0.35) 100%
+  );
+}

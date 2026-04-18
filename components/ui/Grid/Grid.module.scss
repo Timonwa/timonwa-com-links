@@ -1,0 +1,16 @@
+@use "@/styles/tokens" as *;
+
+.grid {
+  display: grid;
+  gap: $space-md;
+  grid-template-columns: 1fr;
+
+  @include tablet-up {
+    &[data-columns="2"] {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &[data-columns="3"] {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

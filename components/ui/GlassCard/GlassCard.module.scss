@@ -1,0 +1,76 @@
+@use "@/styles/tokens" as *;
+@use "@/styles/mixins" as *;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-sm;
+  padding: $space-base;
+  border-radius: $radius-md;
+  color: var(--text);
+  min-height: 120px;
+  @include card;
+  @include hover-lift;
+  @include focus-ring;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-sm;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.name {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  line-height: 1.3;
+}
+
+.desc {
+  font-size: $font-size-sm;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.badge {
+  position: absolute;
+  top: $space-md;
+  right: $space-md;
+  padding: 2px $space-sm;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  border-radius: $radius-pill;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.arrow {
+  position: absolute;
+  bottom: $space-md;
+  right: $space-md;
+  color: var(--text-muted);
+  opacity: 0.6;
+  transition: opacity $transition-base, transform $transition-base,
+    color $transition-base;
+}
+
+.card:hover .arrow {
+  opacity: 1;
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}

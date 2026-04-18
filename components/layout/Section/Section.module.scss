@@ -1,0 +1,38 @@
+@use "@/styles/tokens" as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-base;
+  margin-bottom: $space-2xl;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.desc {
+  font-size: $font-size-sm;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.note {
+  margin-top: -$space-xs;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
