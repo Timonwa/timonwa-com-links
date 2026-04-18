@@ -1,4 +1,3 @@
-import DocHead from "@/components/navigation/Head";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingMenu } from "@/components/layout/FloatingMenu";
@@ -11,12 +10,6 @@ import { ShopSection } from "@/components/sections/ShopSection";
 import { SupportSection } from "@/components/sections/SupportSection";
 import { PressKitSection } from "@/components/sections/PressKitSection";
 import { AffiliatesSection } from "@/components/sections/AffiliatesSection";
-import {
-  SITE_URL,
-  SITE_TITLE,
-  SITE_DESCRIPTION,
-  SITE_COVER_IMAGE,
-} from "@/config";
 
 const MENU_ITEMS = [
   { id: "newsletters", label: "Newsletters" },
@@ -32,13 +25,6 @@ const MENU_ITEMS = [
 export default function Home() {
   return (
     <>
-      <DocHead
-        url={SITE_URL}
-        title={SITE_TITLE}
-        description={SITE_DESCRIPTION}
-        imageUrl={SITE_COVER_IMAGE}
-        imageAlt={SITE_TITLE}
-      />
       <div className="fixed left-5 top-5 z-50">
         <ThemeToggle />
       </div>
