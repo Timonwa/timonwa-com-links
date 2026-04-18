@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import { TECH_WEBSITE } from "@/config";
+import { SOCIAL_TWITTER } from "@/config";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -15,7 +15,7 @@ export function Footer() {
         />{" "}
         by{" "}
         <ExternalLink
-          href={TECH_WEBSITE}
+          href={SOCIAL_TWITTER}
           className="font-semibold text-accent transition-opacity hover:opacity-80"
         >
           Timonwa

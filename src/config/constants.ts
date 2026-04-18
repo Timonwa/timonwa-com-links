@@ -38,6 +38,10 @@ export const SHOP_GUMROAD = "https://timonwa.gumroad.com";
 export const SHOP_BUYMEACOFFEE = "https://buymeacoffee.com/timonwa/extras";
 export const SHOP_LEMONSQUEEZY = "https://timonwa.lemonsqueezy.com/";
 export const SHOP_SELAR = "https://selar.com/m/timonwa";
+export const SHOP_HUB = "https://tech.timonwa.com/shop";
+
+// Tools hub
+export const TOOLS_HUB = "https://tools.timonwa.com";
 
 // Publications
 export const PUBLICATION_DEVTO = "https://dev.to/timonwa";

@@ -5,6 +5,7 @@ import { FloatingMenu } from "@/components/layout/FloatingMenu";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { NewslettersSection } from "@/components/sections/NewslettersSection";
 import { ToolsSection } from "@/components/sections/ToolsSection";
+import { TemplatesSection } from "@/components/sections/TemplatesSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { ShopSection } from "@/components/sections/ShopSection";
 import { SupportSection } from "@/components/sections/SupportSection";
@@ -20,6 +21,7 @@ import {
 const MENU_ITEMS = [
   { id: "newsletters", label: "Newsletters" },
   { id: "tools", label: "Tools" },
+  { id: "templates", label: "Templates" },
   { id: "blog", label: "Blog & Writing" },
   { id: "shop", label: "Shop" },
   { id: "support", label: "Support" },
@@ -46,7 +48,8 @@ export default function Home() {
         <Header />
         <main>
           <NewslettersSection />
-          <ToolsSection />
+          {/* <ToolsSection /> */}
+          <TemplatesSection />
           <BlogSection />
           <ShopSection />
           <SupportSection />

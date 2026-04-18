@@ -1,10 +1,42 @@
-/* Glass surface — translucent brand-cream + blur + soft border/shadow. */
+/* --- Motion tokens ---
+   Use these everywhere so cadence stays consistent across hover, enter, and
+   exit animations. `out-expo` is our default hover ease — quick start, gentle
+   settle. */
+
+@theme {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Glass surface — translucent brand-cream + blur + soft border/shadow.
+   Use for stationary panels (dropdowns, the 2×2 glass grid) where blur is
+   part of the look. Avoid combining with transform-on-hover — animating a
+   backdrop-filtered element over the moving blobs causes the browser to
+   re-sample + re-blur the backdrop every frame (visible jank). */
 @utility glass-surface {
   background: var(--color-glass-bg);
   border: 1px solid var(--color-glass-border);
   backdrop-filter: blur(14px) saturate(180%);
   -webkit-backdrop-filter: blur(14px) saturate(180%);
   box-shadow: var(--shadow-glass);
+}
+
+/* Glass pill — visual cousin of glass-surface but WITHOUT backdrop-filter,
+   so rotate/scale hovers stay on the GPU fast path. Use for small animating
+   buttons (theme toggle, menu button). At 40×40 the blur is barely visible
+   anyway. */
+@utility glass-pill {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Promote an element to its own compositor layer so transform hovers render
+   smoothly and don't repaint nearby content. */
+@utility gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 /* Card surface — slightly more opaque, used by link rows & glass grid cards. */
@@ -18,8 +50,10 @@
 
 /* Hover lift for interactive cards. */
 @utility hover-lift {
-  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out,
-    border-color 250ms ease-in-out, background 250ms ease-in-out;
+  transition: transform 350ms var(--ease-out-expo),
+    box-shadow 350ms var(--ease-out-expo),
+    border-color 350ms ease-out, background 350ms ease-out;
+  will-change: transform;
 
   &:hover {
     transform: translateY(-2px);
@@ -29,6 +63,7 @@
 
   &:active {
     transform: translateY(0);
+    transition-duration: 120ms;
   }
 }
 

@@ -37,7 +37,7 @@ export function GlassCard({
         size={16}
         strokeWidth={2}
         aria-hidden
-        className="absolute bottom-3 right-3 text-muted opacity-60 transition-[transform,opacity,color] duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent group-hover:opacity-100"
+        className="absolute bottom-3 right-3 text-muted opacity-60 transition-[transform,opacity,color] duration-400 ease-out-expo group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent group-hover:opacity-100"
       />
     </ExternalLink>
   );

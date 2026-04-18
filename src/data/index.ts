@@ -6,4 +6,5 @@ export * from "./profile";
 export * from "./shop";
 export * from "./socials";
 export * from "./support";
+export * from "./templates";
 export * from "./tools";

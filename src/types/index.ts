@@ -18,6 +18,13 @@ export interface ToolType {
   status?: "live" | "beta" | "coming-soon";
 }
 
+export interface TemplateType {
+  slug: string;
+  name: string;
+  tagline: string;
+  href: string;
+}
+
 export interface SocialType {
   name: string;
   url: string;

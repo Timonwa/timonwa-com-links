@@ -1,8 +1,9 @@
-import { Wrench } from "lucide-react";
+import { Wrench, LayoutGrid } from "lucide-react";
 import { Section } from "@/components/layout/Section";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Grid } from "@/components/ui/Grid";
 import { tools } from "@/data/tools";
+import { TOOLS_HUB } from "@/config";
 
 const STATUS_LABEL: Record<
   NonNullable<(typeof tools)[number]["status"]>,
@@ -33,6 +34,12 @@ export function ToolsSection() {
             badge={t.status ? STATUS_LABEL[t.status] : undefined}
           />
         ))}
+        <GlassCard
+          name="View all tools"
+          url={TOOLS_HUB}
+          icon={LayoutGrid}
+          description="Browse the full tools directory."
+        />
       </Grid>
     </Section>
   );

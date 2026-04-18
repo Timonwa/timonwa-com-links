@@ -28,7 +28,7 @@ export function FloatingMenu({ items }: FloatingMenuProps) {
     <div className="fixed right-5 top-5 z-50" ref={ref}>
       <button
         type="button"
-        className="glass-surface focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full text-text transition-[transform,color] duration-200 ease-in-out hover:scale-105 hover:text-accent"
+        className="glass-pill gpu-layer focus-ring inline-flex h-10 w-10 items-center justify-center rounded-full text-text transition-[scale,color] duration-400 ease-out-expo hover:scale-105 hover:text-accent"
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open navigation menu"}
         onClick={() => setOpen((o) => !o)}
@@ -43,14 +43,14 @@ export function FloatingMenu({ items }: FloatingMenuProps) {
       {open && (
         <ul
           role="menu"
-          className="glass-surface absolute right-0 top-[calc(100%+0.5rem)] flex min-w-56 animate-[fadeSlide_180ms_ease-out] flex-col gap-0.5 rounded-lg p-2"
+          className="glass-surface absolute right-0 top-[calc(100%+0.5rem)] flex min-w-56 animate-[fadeSlide_280ms_cubic-bezier(0.16,1,0.3,1)_both] flex-col gap-0.5 rounded-lg p-2"
         >
           {items.map((item) => (
             <li key={item.id} role="none">
               <button
                 type="button"
                 role="menuitem"
-                className="flex w-full items-center rounded-md px-3 py-2 text-left text-sm text-text transition-[background,color] duration-150 hover:bg-accent-soft hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent"
+                className="flex w-full items-center rounded-md px-3 py-2 text-left text-sm text-text transition-[background,color] duration-300 ease-out hover:bg-accent-soft hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent"
                 onClick={() => jumpTo(item.id)}
               >
                 {item.label}
@@ -64,11 +64,11 @@ export function FloatingMenu({ items }: FloatingMenuProps) {
         @keyframes fadeSlide {
           from {
             opacity: 0;
-            transform: translateY(-4px);
+            transform: translateY(-8px) scale(0.98);
           }
           to {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
           }
         }
       `}</style>

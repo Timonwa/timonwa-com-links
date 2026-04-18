@@ -1,8 +1,7 @@
 import { Mail, Sparkles, Bug } from "lucide-react";
 import {
-  PUBLICATION_BITS_AND_NOTES,
+  NEWSLETTER_URL,
   PUBLICATION_SIGNEDT,
-  PUBLICATION_THEPRODBUG,
 } from "@/config";
 import type { LinkType } from "@/types";
 
@@ -24,7 +23,7 @@ export const otherNewsletters: LinkType[] = [
   },
   {
     name: "Bits & Notes",
-    url: PUBLICATION_BITS_AND_NOTES,
+    url: NEWSLETTER_URL,
     icon: Sparkles,
     description:
       "Where I share what I'm shipping, the tools I'm testing, and the dev ideas I can't stop thinking about — once a month, in your inbox.",
