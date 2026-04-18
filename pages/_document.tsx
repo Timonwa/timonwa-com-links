@@ -4,18 +4,25 @@ import { Fragment } from "react";
 
 const isLocal = process.env.NODE_ENV === "development";
 
+// Runs before React hydration to set the theme and avoid a flash of the wrong
+// palette. Reads localStorage first, then falls back to prefers-color-scheme.
+const themeBootstrap = `
+(function () {
+  try {
+    var stored = localStorage.getItem('timonwa-links-theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored || (prefersDark ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+`;
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <meta name="view-transition" content="same-origin" />
-        {/* Plausible Analytics */}
-        {/* <script
-          defer
-          data-domain="creative.timonwa.com"
-          src="https://plausible.io/js/script.js"
-        ></script> */}
-
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         {!isLocal && (
           <Fragment>
@@ -35,19 +42,6 @@ export default function Document() {
                 `,
               }}
             />
-
-            {/* Clarity tracking code for https://creative.timonwa.com/ */}
-            {/* <script
-              dangerouslySetInnerHTML={{
-                __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "kt3v849mt5");
-            `,
-              }}
-            /> */}
           </Fragment>
         )}
       </Head>

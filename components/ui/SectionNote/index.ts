@@ -1,1 +1,0 @@
-export { SectionNote } from "./SectionNote";

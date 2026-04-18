@@ -16,7 +16,6 @@ import {
   SITE_DESCRIPTION,
   SITE_COVER_IMAGE,
 } from "@/config";
-import styles from "@/styles/home.module.scss";
 
 const MENU_ITEMS = [
   { id: "newsletters", label: "Newsletters" },
@@ -38,12 +37,12 @@ export default function Home() {
         imageUrl={SITE_COVER_IMAGE}
         imageAlt={SITE_TITLE}
       />
-      <div className={styles.floatingControls}>
+      <div className="fixed left-5 top-5 z-50">
         <ThemeToggle />
       </div>
       <FloatingMenu items={MENU_ITEMS} />
 
-      <div className={styles.page}>
+      <div className="mx-auto max-w-165 px-5">
         <Header />
         <main>
           <NewslettersSection />

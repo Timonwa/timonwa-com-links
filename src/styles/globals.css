@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./themes.css";
+@import "./base.css";
+@import "./typography.css";
+@import "./utilities.css";
+
+/* Attribute-based dark mode — ThemeProvider toggles [data-theme="dark"] on <html>. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));

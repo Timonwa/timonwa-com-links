@@ -1,0 +1,67 @@
+/* Glass surface — translucent brand-cream + blur + soft border/shadow. */
+@utility glass-surface {
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Card surface — slightly more opaque, used by link rows & glass grid cards. */
+@utility card-surface {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(124, 91, 131, 0.06);
+}
+
+/* Hover lift for interactive cards. */
+@utility hover-lift {
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out,
+    border-color 250ms ease-in-out, background 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Focus ring for keyboard nav. */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 0.75rem;
+  }
+}
+
+/* Featured-card pulsating gradient backdrop (applied via ::before). */
+@utility featured-gradient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: var(--gradient-featured);
+    background-size: 200% 200%;
+    animation: var(--animate-pulse-gradient);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::before {
+      animation: none;
+    }
+  }
+}

@@ -1,1 +1,0 @@
-export { AffiliatesSection } from "./AffiliatesSection";

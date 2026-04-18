@@ -1,1 +1,0 @@
-export { ShopSection } from "./ShopSection";

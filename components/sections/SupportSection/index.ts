@@ -1,1 +1,0 @@
-export { SupportSection } from "./SupportSection";
