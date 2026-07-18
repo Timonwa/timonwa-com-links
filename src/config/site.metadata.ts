@@ -2,7 +2,7 @@ export const siteConfig = {
   url: "https://links.timonwa.com",
   title: "Timonwa Akintokun | Links",
   description:
-    "Software engineer by trade, writer by heart, creator by nature. Building tools, sharing notes, and exploring the overlap of tech, creativity, and productivity.",
+    "Software engineer and writer building tools, templates, and notes on tech, creativity, and productivity — all my links in one place.",
   author: "Timonwa Akintokun",
   cover_image: "https://links.timonwa.com/avatar.jpg",
   cover_image_alt: "Timonwa Akintokun",
