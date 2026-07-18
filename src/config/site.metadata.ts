@@ -1,4 +1,6 @@
 export const siteConfig = {
+  avatar: "/avatar.jpg",
+  name: "Timonwa Akintokun",
   url: "https://links.timonwa.com",
   title: "Timonwa Akintokun | Links",
   description:

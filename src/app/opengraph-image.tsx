@@ -1,15 +1,14 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { SITE_URL } from "@/config";
-import { profile } from "@/data/profile";
+import { SITE_URL, siteConfig } from "@/config";
 
-export const alt = `${profile.name} — Links`;
+export const alt = `${siteConfig.name} — Links`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // The bio's first sentence reads well as a standalone tagline.
-const tagline = profile.bio.split(". ")[0] + ".";
+const tagline = siteConfig.description.split(". ")[0] + ".";
 const domain = SITE_URL.replace(/^https?:\/\//, "");
 
 export default async function OpengraphImage() {
@@ -46,9 +45,11 @@ export default async function OpengraphImage() {
               objectFit: "cover",
             }}
           />
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "12px" }}
+          >
             <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05 }}>
-              {profile.name}
+              {siteConfig.name}
             </div>
             <div
               style={{
@@ -92,6 +93,6 @@ export default async function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size },
+    { ...size }
   );
 }

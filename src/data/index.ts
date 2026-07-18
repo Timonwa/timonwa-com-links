@@ -2,7 +2,6 @@ export * from "./affiliates";
 export * from "./blog";
 export * from "./newsletters";
 export * from "./pressKit";
-export * from "./profile";
 export * from "./shop";
 export * from "./socials";
 export * from "./support";
