@@ -7,8 +7,8 @@ export function PressKitSection() {
   return (
     <Section
       id="press"
-      title="Talks, Press Kit & CV"
-      description="Speaking, press materials, and everything hiring managers ask for."
+      title="Work With Me"
+      description="Portfolio, CV, talks, press, and rates — everything to work together."
     >
       <Stack>
         {pressKitLinks.map((l) => (

@@ -7,6 +7,7 @@ export function LinkCard({ name, url, icon: Icon, description }: LinkType) {
     <ExternalLink
       href={url}
       aria-label={`${name}${description ? ` — ${description}` : ""}`}
+      data-umami-event={name}
       className="card-surface hover-lift focus-ring group flex w-full items-center gap-3 rounded-lg px-4 py-3 text-text"
     >
       {Icon && (

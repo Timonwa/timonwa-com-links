@@ -3,7 +3,7 @@ import { Section } from "@/components/layout/Section";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Grid } from "@/components/ui/Grid";
 import { templates } from "@/data/templates";
-import { SHOP_GUMROAD } from "@/config";
+import { SHOP_HUB } from "@/config";
 
 export function TemplatesSection() {
   if (templates.length === 0) return null;
@@ -26,7 +26,7 @@ export function TemplatesSection() {
         ))}
         <GlassCard
           name="View all templates"
-          url={SHOP_GUMROAD}
+          url={SHOP_HUB}
           icon={LayoutGrid}
           description="Browse the full shop for more templates."
         />

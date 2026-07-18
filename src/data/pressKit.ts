@@ -9,9 +9,9 @@ import {
 import type { LinkType } from "@/types";
 
 export const pressKitLinks: LinkType[] = [
+  { name: "Writing Portfolio", url: WRITER_PORTFOLIO, icon: Briefcase },
+  { name: "Tech CV", url: TECH_CV, icon: FileText },
   { name: "Talks & Slides", url: TALKS_URL, icon: Mic },
   { name: "Press Kit", url: PRESS_KIT, icon: Newspaper },
-  { name: "Tech CV", url: TECH_CV, icon: FileText },
-  { name: "Writing Portfolio", url: WRITER_PORTFOLIO, icon: Briefcase },
   { name: "Writer Rate Card", url: WRITER_RATE_CARD, icon: Receipt },
 ];

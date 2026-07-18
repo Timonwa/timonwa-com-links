@@ -6,7 +6,6 @@ import {
   SITE_URL,
   SITE_TITLE,
   SITE_DESCRIPTION,
-  SITE_COVER_IMAGE,
   SITE_TWITTER_HANDLE,
   SITE_GOOGLE_ANALYTICS,
   SITE_NAME,
@@ -44,7 +43,6 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     siteName: SITE_NAME,
-    images: [{ url: SITE_COVER_IMAGE, alt: SITE_NAME }],
   },
   twitter: {
     card: "summary_large_image",
@@ -52,7 +50,6 @@ export const metadata: Metadata = {
     creator: SITE_TWITTER_HANDLE,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [SITE_COVER_IMAGE],
   },
   icons: { icon: "/favicon.ico" },
   other: {

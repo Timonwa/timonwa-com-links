@@ -12,7 +12,7 @@ export function ShopSection() {
       description="Templates, resources, and digital goods. Same items, your choice of store."
       note={
         <SectionNote>
-          <strong>Nigerian cards?</strong> Try Selar for a smoother checkout.
+          <strong>African cards?</strong> Try Selar for a smoother checkout.
         </SectionNote>
       }
     >

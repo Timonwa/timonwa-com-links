@@ -31,7 +31,7 @@ export function ToolsSection() {
             url={t.href}
             icon={Wrench}
             description={t.tagline}
-            badge={t.status ? STATUS_LABEL[t.status] : undefined}
+            badge={t.badge ?? (t.status ? STATUS_LABEL[t.status] : undefined)}
           />
         ))}
         <GlassCard

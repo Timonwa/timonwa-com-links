@@ -12,7 +12,7 @@ export function SupportSection() {
       description="If you've enjoyed something I made, a tip goes a long way."
       note={
         <SectionNote>
-          <strong>Nigerian cards?</strong> Try Paystack or Selar.
+          <strong>African cards?</strong> Try Selar or Paystack.
         </SectionNote>
       }
     >

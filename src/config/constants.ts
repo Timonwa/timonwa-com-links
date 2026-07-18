@@ -23,6 +23,8 @@ export const SOCIAL_LINKEDIN = "https://linkedin.com/in/timonwa";
 export const SOCIAL_TWITTER = "https://x.com/timonwa_";
 export const SOCIAL_INSTAGRAM = "https://instagram.com/timonwa_";
 export const SOCIAL_YOUTUBE = "https://youtube.com/@timonwa";
+export const SOCIAL_TELEGRAM = "https://t.me/timonwa";
+export const SOCIAL_BLUESKY = "https://bsky.app/profile/timonwa.bsky.social";
 export const SOCIAL_THREADS = "https://www.threads.com/@timonwa_";
 export const SOCIAL_TIKTOK = "https://tiktok.com/@timonwa_";
 export const SOCIAL_CODEPEN = "https://codepen.io/timonwa/pens/popular";
@@ -32,13 +34,18 @@ export const SUPPORT_BUYMEACOFFEE = "https://www.buymeacoffee.com/timonwa";
 export const SUPPORT_GITHUB_SPONSORS = "https://github.com/sponsors/Timonwa";
 export const SUPPORT_SELAR = "https://selar.co/showlove/timonwa";
 export const SUPPORT_PAYSTACK = "https://paystack.shop/pay/timonwa";
+export const SUPPORT_HUB = "https://tech.timonwa.com/support";
 
 // Shop
-export const SHOP_GUMROAD = "https://timonwa.gumroad.com";
 export const SHOP_BUYMEACOFFEE = "https://buymeacoffee.com/timonwa/extras";
-export const SHOP_LEMONSQUEEZY = "https://timonwa.lemonsqueezy.com/";
 export const SHOP_SELAR = "https://selar.com/m/timonwa";
 export const SHOP_HUB = "https://tech.timonwa.com/shop";
+
+// Individual products (Buy Me a Coffee, until the shop product pages ship)
+export const TEMPLATE_WRITERS_PORTFOLIO =
+  "https://buymeacoffee.com/timonwa/e/253285?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=writers_portfolio";
+export const TEMPLATE_NEXTJS_STARTER =
+  "https://buymeacoffee.com/timonwa/e/536285?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=nextjs_pro_starter";
 
 // Tools hub
 export const TOOLS_HUB = "https://tools.timonwa.com";

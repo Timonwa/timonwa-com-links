@@ -18,6 +18,7 @@ export function FeaturedCard({
   return (
     <ExternalLink
       href={url}
+      data-umami-event={`Featured: ${name}`}
       className="card-surface hover-lift focus-ring featured-gradient group flex flex-col gap-3 rounded-2xl p-6 text-text"
     >
       <div className="flex flex-wrap items-center gap-3">

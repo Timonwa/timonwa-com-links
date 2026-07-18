@@ -1,15 +1,9 @@
-import { Store, ShoppingBag, Package, Coffee } from "lucide-react";
-import {
-  SHOP_GUMROAD,
-  SHOP_BUYMEACOFFEE,
-  SHOP_LEMONSQUEEZY,
-  SHOP_SELAR,
-} from "@/config";
+import { Package, Coffee, Store } from "lucide-react";
+import { SHOP_BUYMEACOFFEE, SHOP_SELAR, SHOP_HUB } from "@/config";
 import type { LinkType } from "@/types";
 
 export const shopLinks: LinkType[] = [
-  { name: "Gumroad", url: SHOP_GUMROAD, icon: Store },
   { name: "Buy Me a Coffee", url: SHOP_BUYMEACOFFEE, icon: Coffee },
-  { name: "Lemon Squeezy", url: SHOP_LEMONSQUEEZY, icon: ShoppingBag },
   { name: "Selar", url: SHOP_SELAR, icon: Package },
+  { name: "All products", url: SHOP_HUB, icon: Store },
 ];
