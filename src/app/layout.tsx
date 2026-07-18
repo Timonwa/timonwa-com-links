@@ -82,6 +82,14 @@ export default function RootLayout({
 
         {isProduction && (
           <>
+            {/* Umami Analytics (primary) */}
+            <Script
+              src="https://cloud.umami.is/script.js"
+              data-website-id="4550710a-0c5e-462a-8012-5d3ee2f3769e"
+              strategy="afterInteractive"
+            />
+
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${SITE_GOOGLE_ANALYTICS}`}
               strategy="afterInteractive"
@@ -96,11 +104,6 @@ export default function RootLayout({
                 });
               `}
             </Script>
-            <Script
-              src="https://cloud.umami.is/script.js"
-              data-website-id="4550710a-0c5e-462a-8012-5d3ee2f3769e"
-              strategy="afterInteractive"
-            />
           </>
         )}
       </body>
