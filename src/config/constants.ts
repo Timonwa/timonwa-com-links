@@ -41,11 +41,11 @@ export const SHOP_BUYMEACOFFEE = "https://buymeacoffee.com/timonwa/extras";
 export const SHOP_SELAR = "https://selar.com/m/timonwa";
 export const SHOP_HUB = "https://tech.timonwa.com/shop";
 
-// Individual products (Buy Me a Coffee, until the shop product pages ship)
+// Individual product pages on the shop
 export const TEMPLATE_WRITERS_PORTFOLIO =
-  "https://buymeacoffee.com/timonwa/e/253285?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=writers_portfolio";
+  "https://tech.timonwa.com/shop/writers-portfolio?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=writers_portfolio";
 export const TEMPLATE_NEXTJS_STARTER =
-  "https://buymeacoffee.com/timonwa/e/536285?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=nextjs_pro_starter";
+  "https://tech.timonwa.com/shop/nextjs-starter?utm_source=links_timonwa_com&utm_medium=referral&utm_campaign=nextjs_pro_starter";
 
 // Tools hub
 export const TOOLS_HUB = "https://tools.timonwa.com";
