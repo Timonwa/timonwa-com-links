@@ -8,7 +8,7 @@ const STORAGE_KEY = "timonwa-links-theme";
 // is just a thin DOM/localStorage wrapper; the theme "lives" on <html> and is
 // initialized pre-hydration by the script in _document.tsx.
 export function useTheme() {
-  const [theme, setThemeState] = useState<ThemeType>("light");
+  const [theme, setThemeState] = useState<ThemeType>("dark");
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-theme");

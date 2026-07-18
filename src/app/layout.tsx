@@ -20,13 +20,12 @@ const poppins = Poppins({
 const isProduction = process.env.NODE_ENV === "production";
 
 // Runs before React hydration to set the theme and avoid a flash of the wrong
-// palette. Reads localStorage first, then falls back to prefers-color-scheme.
+// palette. Honours an explicit saved choice, otherwise defaults to dark.
 const themeBootstrap = `
 (function () {
   try {
     var stored = localStorage.getItem('timonwa-links-theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = stored || (prefersDark ? 'dark' : 'light');
+    var theme = stored === 'light' || stored === 'dark' ? stored : 'dark';
     document.documentElement.setAttribute('data-theme', theme);
   } catch (e) {}
 })();
