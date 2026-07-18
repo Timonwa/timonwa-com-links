@@ -1,9 +1,15 @@
-import type { ReactNode } from "react";
+import { Children, type ReactNode } from "react";
 
 interface StackProps {
   children: ReactNode;
 }
 
 export function Stack({ children }: StackProps) {
-  return <div className="flex flex-col gap-2">{children}</div>;
+  return (
+    <ul className="flex list-none flex-col gap-2">
+      {Children.map(children, (child) => (
+        <li>{child}</li>
+      ))}
+    </ul>
+  );
 }

@@ -10,13 +10,14 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="flex flex-col items-center gap-5 py-8 text-center text-sm text-muted">
-      <nav
-        aria-label="More social links"
-        className="flex max-w-full flex-wrap justify-center gap-2"
-      >
-        {allSocials.map((s) => (
-          <SocialIcon key={s.name} {...s} />
-        ))}
+      <nav aria-label="All social links">
+        <ul className="flex max-w-full list-none flex-wrap justify-center gap-2">
+          {allSocials.map((s) => (
+            <li key={s.name}>
+              <SocialIcon {...s} />
+            </li>
+          ))}
+        </ul>
       </nav>
       <p className="inline-flex flex-wrap items-center justify-center gap-1">
         Built with{" "}

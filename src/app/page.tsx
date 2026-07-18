@@ -26,6 +26,12 @@ const MENU_ITEMS = [
 export default function Home() {
   return (
     <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-5 focus:top-5 focus:z-60 focus:rounded-lg focus:bg-brand-purple focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-cta"
+      >
+        Skip to main content
+      </a>
       <div className="fixed left-5 top-5 z-50">
         <ThemeToggle />
       </div>
@@ -33,7 +39,7 @@ export default function Home() {
 
       <div className="mx-auto max-w-165 px-5">
         <Header />
-        <main>
+        <main id="main" tabIndex={-1} className="outline-none">
           <FeaturedSection />
           <TemplatesSection />
           <ToolsSection />

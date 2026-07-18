@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Children, type ReactNode } from "react";
 
 interface GridProps {
   children: ReactNode;
@@ -12,8 +12,10 @@ const COLUMN_CLASS: Record<2 | 3, string> = {
 
 export function Grid({ children, columns = 2 }: GridProps) {
   return (
-    <div className={`grid grid-cols-1 gap-3 ${COLUMN_CLASS[columns]}`}>
-      {children}
-    </div>
+    <ul className={`grid list-none grid-cols-1 gap-3 ${COLUMN_CLASS[columns]}`}>
+      {Children.map(children, (child) => (
+        <li>{child}</li>
+      ))}
+    </ul>
   );
 }

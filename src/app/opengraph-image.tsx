@@ -7,8 +7,6 @@ export const alt = `${siteConfig.name} — Links`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// The bio's first sentence reads well as a standalone tagline.
-const tagline = siteConfig.description.split(". ")[0] + ".";
 const domain = SITE_URL.replace(/^https?:\/\//, "");
 
 export default async function OpengraphImage() {
@@ -74,7 +72,7 @@ export default async function OpengraphImage() {
             maxWidth: "960px",
           }}
         >
-          {tagline}
+          {siteConfig.tagline}
         </div>
 
         <div

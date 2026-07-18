@@ -70,7 +70,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html
+      lang="en"
+      className={`${poppins.variable} motion-safe:scroll-smooth`}
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
