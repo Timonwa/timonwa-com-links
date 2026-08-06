@@ -2,7 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { useClickOutside } from "@/hooks";
+import { useClickOutside } from "@/lib/hooks";
 
 interface FloatingMenuItem {
   id: string;

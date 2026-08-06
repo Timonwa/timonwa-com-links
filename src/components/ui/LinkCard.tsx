@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import type { LinkType } from "@/types";
+import type { LinkType } from "@/lib/types";
 
 export function LinkCard({ name, url, icon: Icon, description }: LinkType) {
   return (

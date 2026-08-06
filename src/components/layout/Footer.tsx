@@ -1,8 +1,7 @@
 import { Heart } from "lucide-react";
-import { ExternalLink } from "@/components/ui/ExternalLink";
-import { SocialIcon } from "@/components/ui/SocialIcon";
-import { socials, moreSocials } from "@/data/socials";
-import { SOCIAL_TWITTER } from "@/config";
+import { ExternalLink, SocialIcon } from "@/components/ui";
+import { socials, moreSocials } from "@/lib/data";
+import { SOCIAL_TWITTER } from "@/lib/config";
 
 const allSocials = [...socials, ...moreSocials];
 

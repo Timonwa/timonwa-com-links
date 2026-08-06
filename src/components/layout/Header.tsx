@@ -1,7 +1,6 @@
-import { Avatar } from "@/components/ui/Avatar";
-import { SocialIcon } from "@/components/ui/SocialIcon";
-import { siteConfig } from "@/config/site.metadata";
-import { socials } from "@/data/socials";
+import { Avatar, SocialIcon } from "@/components/ui";
+import { siteConfig } from "@/lib/config";
+import { socials } from "@/lib/data";
 
 export function Header() {
   return (

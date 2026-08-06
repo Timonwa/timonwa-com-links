@@ -1,5 +1,5 @@
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import type { SocialType } from "@/types";
+import type { SocialType } from "@/lib/types";
 
 export function SocialIcon({ name, url, icon: Icon, title }: SocialType) {
   const label = title ?? name;
