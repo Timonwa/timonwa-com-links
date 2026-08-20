@@ -1,18 +1,14 @@
-import { Bug, BookOpen, Mail } from "lucide-react";
-import {
-  BLOG_THE_PROD_BUG,
-  BLOG_TIMONWAS_NOTES,
-  BLOG_SIGNEDT,
-} from "@/lib/config";
+import { Wrench, BookOpen, Mail } from "lucide-react";
+import { BLOG_ODD_JOBS, BLOG_TIMONWAS_NOTES, BLOG_SIGNEDT } from "@/lib/config";
 import type { LinkType } from "@/lib/types";
 
 export const writingLinks: LinkType[] = [
   {
-    name: "The Productive Bug",
-    url: BLOG_THE_PROD_BUG,
-    icon: Bug,
+    name: "Odd Jobs",
+    url: BLOG_ODD_JOBS,
+    icon: Wrench,
     description:
-      "Free web tools, guides, and resources for developers, writers, and creators.",
+      "Guides, tutorials, and lessons learned the hard way — on the tools, shortcuts, and workflows worth stealing.",
   },
   {
     name: "Timonwa's Notes",
