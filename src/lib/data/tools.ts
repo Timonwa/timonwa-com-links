@@ -1,3 +1,4 @@
+import { WEBSITE_ODD_JOBS } from "@/lib/config";
 import type { ToolType } from "@/lib/types";
 
 export const tools: ToolType[] = [
@@ -5,7 +6,7 @@ export const tools: ToolType[] = [
     slug: "article-to-social-posts",
     name: "Article to Social Posts",
     tagline: "Turn articles into platform-optimized social media posts.",
-    href: "https://tools.timonwa.com/article-to-social-posts",
+    href: `${WEBSITE_ODD_JOBS}/article-to-social-posts`,
     status: "live",
     badge: "Popular",
   },
@@ -14,7 +15,7 @@ export const tools: ToolType[] = [
     name: "Article to SEO Meta",
     tagline:
       "Generate SEO-friendly title and description variations with character counts in spec.",
-    href: "https://tools.timonwa.com/article-to-seo-meta",
+    href: `${WEBSITE_ODD_JOBS}/article-to-seo-meta`,
     status: "live",
   },
   {
@@ -22,7 +23,7 @@ export const tools: ToolType[] = [
     name: "Word & Character Counter",
     tagline:
       "Live word, character, sentence, and reading-time counts, with platform character limits.",
-    href: "https://tools.timonwa.com/word-counter",
+    href: `${WEBSITE_ODD_JOBS}/word-counter`,
     status: "live",
   },
 ];

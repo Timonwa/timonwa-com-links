@@ -15,7 +15,7 @@ export const SOCIAL_BLUESKY = "https://bsky.app/profile/timonwa.bsky.social";
 // My websites
 export const WEBSITE_WWW = "https://www.timonwa.com";
 export const WEBSITE_TECH = "https://tech.timonwa.com";
-export const WEBSITE_TOOLS = "https://tools.timonwa.com";
+export const WEBSITE_ODD_JOBS = "https://odd-jobs.timonwa.com";
 
 // My links
 export const SHOP_LINK = "https://www.timonwa.com/shop";
@@ -27,7 +27,7 @@ export const SUPPORT_SELAR = "https://selar.co/showlove/timonwa";
 
 // Blogs
 export const BLOG_TIMONWAS_NOTES = "https://tech.timonwa.com/blog";
-export const BLOG_THE_PROD_BUG = "https://tools.timonwa.com/guides";
+export const BLOG_ODD_JOBS = "https://odd-jobs.timonwa.com/blog";
 export const BLOG_SIGNEDT = "https://timonwa.substack.com/";
 
 // Product links (with referral attribution)
