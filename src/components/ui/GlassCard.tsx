@@ -16,8 +16,11 @@ export function GlassCard({
   return (
     <ExternalLink
       href={url}
-      aria-label={`${name}${badge ? ` (${badge})` : ""}${description ? ` — ${description}` : ""}`}
-      data-umami-event={name}
+      aria-label={`${name}${badge ? ` (${badge})` : ""}${
+        description ? ` — ${description}` : ""
+      }`}
+      data-umami-event="link-click"
+      data-umami-event-name={name}
       className="card-surface hover-lift focus-ring group relative flex h-full min-h-30 flex-col items-start gap-2 rounded-xl p-4 text-text"
     >
       <div className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-accent-soft text-accent">

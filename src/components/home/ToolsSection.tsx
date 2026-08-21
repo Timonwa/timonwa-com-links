@@ -1,7 +1,7 @@
 import { Wrench, LayoutGrid } from "lucide-react";
 import { Section, GlassCard, Grid } from "@/components/ui";
 import { tools } from "@/lib/data/tools";
-import { WEBSITE_ODD_JOBS } from "@/lib/config";
+import { ODD_JOBS_REFERRAL_QUERY, WEBSITE_ODD_JOBS } from "@/lib/config";
 
 const STATUS_LABEL: Record<
   NonNullable<(typeof tools)[number]["status"]>,
@@ -34,7 +34,7 @@ export function ToolsSection() {
         ))}
         <GlassCard
           name="View all tools"
-          url={`${WEBSITE_ODD_JOBS}/tools`}
+          url={`${WEBSITE_ODD_JOBS}/tools${ODD_JOBS_REFERRAL_QUERY}`}
           icon={LayoutGrid}
           description="Browse the full tools directory."
         />

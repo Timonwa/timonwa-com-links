@@ -13,7 +13,9 @@ const COLUMN_CLASS: Record<2 | 3, string> = {
 
 export function Grid({ children, columns = 2 }: GridProps) {
   return (
-    <ul className={cn("grid list-none grid-cols-1 gap-3", COLUMN_CLASS[columns])}>
+    <ul
+      className={cn("grid list-none grid-cols-1 gap-3", COLUMN_CLASS[columns])}
+    >
       {Children.map(children, (child) => (
         <li>{child}</li>
       ))}
