@@ -44,8 +44,11 @@ export const RESOURCE_CV = `https://www.timonwa.com/t/cv${from("cv")}`;
 export const RESOURCE_PRESS_KIT = `https://www.timonwa.com/press-kit${from(
   "press_kit"
 )}`;
+// Campaign is `my_writing_portfolio`, not `writer_portfolio` — the latter is a
+// character away from the `writers_portfolio` template sold in the shop, and the
+// two are different things (my portfolio vs a product).
 export const RESOURCE_WRITER_PORTFOLIO = `https://www.timonwa.com/w/portfolio${from(
-  "writer_portfolio"
+  "my_writing_portfolio"
 )}`;
 export const RESOURCE_RATE_CARD = `https://www.timonwa.com/w/rate-card${from(
   "rate_card"
