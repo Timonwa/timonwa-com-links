@@ -5,18 +5,25 @@ A single-page link-in-bio site at [links.timonwa.com](https://links.timonwa.com)
 ## Stack
 
 - **Framework** — Next.js 14 (App Router) + React 18 + TypeScript
-- **Styling** — Tailwind CSS v4 (no SCSS, no runtime theming library)
+- **Styling** — Tailwind CSS v4
 - **Icons** — lucide-react + @icons-pack/react-simple-icons
 - **Package manager** — pnpm
 
-## Local setup
+## Getting started
 
 ```bash
 pnpm install
 pnpm dev          # http://localhost:3000
-pnpm build        # production build
-pnpm lint
 ```
+
+## Scripts
+
+| Script           | What it does                              |
+| ---------------- | ----------------------------------------- |
+| `pnpm dev`       | Start the dev server                      |
+| `pnpm build`     | Production build                          |
+| `pnpm start`     | Serve the production build                |
+| `pnpm lint`      | ESLint                                    |
 
 ## Structure
 
