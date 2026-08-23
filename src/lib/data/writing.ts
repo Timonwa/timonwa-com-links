@@ -4,13 +4,6 @@ import type { LinkType } from "@/lib/types";
 
 export const writingLinks: LinkType[] = [
   {
-    name: "Odd Jobs",
-    url: BLOG_ODD_JOBS,
-    icon: Wrench,
-    description:
-      "Guides, tutorials, and lessons learned the hard way — on the tools, shortcuts, and workflows worth stealing.",
-  },
-  {
     name: "Timonwa's Notes",
     url: BLOG_TIMONWAS_NOTES,
     icon: BookOpen,
@@ -23,5 +16,12 @@ export const writingLinks: LinkType[] = [
     icon: Mail,
     description:
       "Personal thoughts, notes, experiences, and reflections — just me, being human.",
+  },
+  {
+    name: "Odd Jobs",
+    url: BLOG_ODD_JOBS,
+    icon: Wrench,
+    description:
+      "Guides, tutorials, and lessons learned the hard way — on the tools, shortcuts, and workflows worth stealing.",
   },
 ];
