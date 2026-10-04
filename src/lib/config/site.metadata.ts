@@ -19,6 +19,5 @@ export const siteConfig = {
   author: "Timonwa Akintokun",
   twitter: "@timonwa_",
   default_site_type: "website",
-  umami_website_id: "4550710a-0c5e-462a-8012-5d3ee2f3769e",
-  umami_tag: "links",
+  umami_website_id: "5709b2f4-ac29-40e2-b826-507fe62ae8dd",
 };

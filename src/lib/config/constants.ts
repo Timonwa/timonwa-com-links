@@ -74,3 +74,6 @@ export const TEMPLATE_IDEA_INCUBATOR = `https://www.timonwa.com/shop/idea-incuba
 export const TEMPLATE_GOALS_PLANNER = `https://www.timonwa.com/shop/goals-planner${from(
   "yearly_goals_planner"
 )}`;
+
+// Self-hosted Umami
+export const ANALYTICS_UMAMI = "https://analytics.timonwa.com";
