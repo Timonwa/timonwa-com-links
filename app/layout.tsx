@@ -1,7 +1,8 @@
 import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
-import { isProduction, siteConfig } from "@/lib/config";
+import Script from "next/script";
+import { ANALYTICS_UMAMI, isProduction, siteConfig } from "@/lib/config";
 import { personSchema, websiteSchema } from "@/lib/seo";
 import { JsonLd } from "@/components/layout/JsonLd";
 import { Header } from "@/components/layout/Header";
@@ -79,13 +80,19 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <JsonLd data={[personSchema(), websiteSchema()]} />
         {isProduction && siteConfig.umami_website_id && (
-          <script
-            defer
-            src="https://cloud.umami.is/script.js"
-            data-website-id={siteConfig.umami_website_id}
-            data-tag={siteConfig.umami_tag}
-            data-performance="true"
-          />
+          <>
+            <Script
+              src={`${ANALYTICS_UMAMI}/script.js`}
+              data-website-id={siteConfig.umami_website_id}
+              data-performance="true"
+              strategy="afterInteractive"
+            />
+            <Script
+              src={`${ANALYTICS_UMAMI}/recorder.js`}
+              data-website-id={siteConfig.umami_website_id}
+              strategy="afterInteractive"
+            />
+          </>
         )}
       </head>
       <body>
