@@ -29,6 +29,30 @@ export const WEBSITE_TECH = `https://tech.timonwa.com${from(
 export const WEBSITE_ODD_JOBS = "https://odd-jobs.timonwa.com";
 export const ODD_JOBS_REFERRAL_QUERY = from("link_hub");
 
+// Projects — the Studio keeps the full list; each card keeps its own campaign.
+export const WEBSITE_STUDIO = `https://studio.timonwa.com${from("studio")}`;
+export const PROJECT_FIREBASE_HOOKS = `https://firebase-hooks.vercel.app${from(
+  "firebase_hooks"
+)}`;
+export const PROJECT_JAVASCRIPT_PROJECTS = `https://javascript-projects.timonwa.com${from(
+  "javascript_projects"
+)}`;
+export const PROJECT_TECH_ROADMAP = `https://roadmaps.timonwa.com${from(
+  "tech_roadmap"
+)}`;
+
+// AI skills — shop pages are tagged; GitHub is third-party, so it stays bare.
+export const SKILLS_TECHNICAL_WRITING = `https://www.timonwa.com/shop/technical-writing-skills${from(
+  "technical_writing_skills"
+)}`;
+export const SKILLS_CONTENT_WRITING = `https://www.timonwa.com/shop/content-writing-skills${from(
+  "content_writing_skills"
+)}`;
+export const SKILLS_ENGINEERING =
+  "https://github.com/Timonwa/engineering-skills";
+export const SKILLS_ALL =
+  "https://github.com/Timonwa?tab=repositories&q=skills";
+
 // My links
 export const SHOP_LINK = `https://www.timonwa.com/shop${from("shop")}`;
 export const SUPPORT_LINK = `https://www.timonwa.com/support${from("support")}`;
