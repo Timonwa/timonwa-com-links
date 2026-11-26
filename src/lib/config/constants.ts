@@ -29,9 +29,34 @@ export const WEBSITE_TECH = `https://tech.timonwa.com${from(
 export const WEBSITE_ODD_JOBS = "https://odd-jobs.timonwa.com";
 export const ODD_JOBS_REFERRAL_QUERY = from("link_hub");
 
+// Projects — the Studio keeps the full list; each card keeps its own campaign.
+export const WEBSITE_STUDIO = `https://studio.timonwa.com${from("studio")}`;
+export const PROJECT_FIREBASE_HOOKS = `https://firebase-hooks.vercel.app${from(
+  "firebase_hooks"
+)}`;
+export const PROJECT_JAVASCRIPT_PROJECTS = `https://javascript-projects.timonwa.com${from(
+  "javascript_projects"
+)}`;
+export const PROJECT_TECH_ROADMAP = `https://roadmaps.timonwa.com${from(
+  "tech_roadmap"
+)}`;
+
+// AI skills — shop pages are tagged; GitHub is third-party, so it stays bare.
+export const SKILLS_TECHNICAL_WRITING = `https://www.timonwa.com/shop/technical-writing-skills${from(
+  "technical_writing_skills"
+)}`;
+export const SKILLS_CONTENT_WRITING = `https://www.timonwa.com/shop/content-writing-skills${from(
+  "content_writing_skills"
+)}`;
+export const SKILLS_ENGINEERING =
+  "https://github.com/Timonwa/engineering-skills";
+export const SKILLS_ALL =
+  "https://github.com/Timonwa?tab=repositories&q=skills";
+
 // My links
 export const SHOP_LINK = `https://www.timonwa.com/shop${from("shop")}`;
 export const SUPPORT_LINK = `https://www.timonwa.com/support${from("support")}`;
+export const CAREER_LINK = `https://www.timonwa.com/career${from("career")}`;
 
 // Support — third-party checkout platforms, untagged.
 export const SUPPORT_BUYMEACOFFEE = "https://www.buymeacoffee.com/timonwa";
@@ -40,7 +65,6 @@ export const SUPPORT_SELAR = "https://selar.co/showlove/timonwa";
 // Work-with-me resources — link to the vanity routes on the main site (which
 // redirect to the real Drive/Notion docs). The destination is maintained once
 // on www, so updating a redirect there updates every site automatically.
-export const RESOURCE_CV = `https://www.timonwa.com/t/cv${from("cv")}`;
 export const RESOURCE_PRESS_KIT = `https://www.timonwa.com/press-kit${from(
   "press_kit"
 )}`;
@@ -49,9 +73,6 @@ export const RESOURCE_PRESS_KIT = `https://www.timonwa.com/press-kit${from(
 // two are different things (my portfolio vs a product).
 export const RESOURCE_WRITER_PORTFOLIO = `https://www.timonwa.com/w/portfolio${from(
   "my_writing_portfolio"
-)}`;
-export const RESOURCE_RATE_CARD = `https://www.timonwa.com/w/rate-card${from(
-  "rate_card"
 )}`;
 
 // Blogs

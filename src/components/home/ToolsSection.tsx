@@ -1,44 +1,25 @@
-import { Wrench, LayoutGrid } from "lucide-react";
-import { Section, GlassCard, Grid } from "@/components/ui";
+import { Wrench } from "lucide-react";
+import { CardGridSection } from "@/components/ui";
 import { tools } from "@/lib/data/tools";
 import { ODD_JOBS_REFERRAL_QUERY, WEBSITE_ODD_JOBS } from "@/lib/config";
 
-const STATUS_LABEL: Record<
-  NonNullable<(typeof tools)[number]["status"]>,
-  string
-> = {
-  live: "Live",
-  beta: "Beta",
-  "coming-soon": "Soon",
-};
-
 export function ToolsSection() {
-  if (tools.length === 0) return null;
-
   return (
-    <Section
+    <CardGridSection
       id="tools"
       title="Tools I've Built"
       description="Free web tools I've made to make work (and life) a little easier."
-    >
-      <Grid columns={2}>
-        {tools.map((t) => (
-          <GlassCard
-            key={t.slug}
-            name={t.name}
-            url={t.href}
-            icon={Wrench}
-            description={t.tagline}
-            badge={t.badge ?? (t.status ? STATUS_LABEL[t.status] : undefined)}
-          />
-        ))}
-        <GlassCard
-          name="View all tools"
-          url={`${WEBSITE_ODD_JOBS}/tools${ODD_JOBS_REFERRAL_QUERY}`}
-          icon={LayoutGrid}
-          description="Browse the full tools directory."
-        />
-      </Grid>
-    </Section>
+      items={tools.map((t) => ({
+        name: t.name,
+        url: t.href,
+        icon: Wrench,
+        description: t.tagline,
+      }))}
+      seeAll={{
+        name: "See all tools",
+        url: `${WEBSITE_ODD_JOBS}/tools${ODD_JOBS_REFERRAL_QUERY}`,
+        description: "Browse the full tools directory.",
+      }}
+    />
   );
 }

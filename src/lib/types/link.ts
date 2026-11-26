@@ -7,3 +7,8 @@ export interface LinkType {
   description?: string;
   isExt?: boolean;
 }
+
+export interface FeaturedLinkType extends LinkType {
+  eyebrow: string;
+  cta: string;
+}

@@ -1,18 +1,26 @@
 import { Section, FeaturedCard } from "@/components/ui";
-import { featuredProduct } from "@/lib/data/featured";
+import { featuredProducts } from "@/lib/data/featured";
 
+// The first product leads; the rest sit below it as compact cards.
 export function FeaturedSection() {
+  const [lead, ...rest] = featuredProducts;
+
   return (
     <Section
       id="featured"
       title="Featured"
-      description="Start here — the one most people came for."
+      description="Start here — my newest and my best-seller."
     >
-      <FeaturedCard
-        {...featuredProduct}
-        eyebrow="Best-seller"
-        cta="Get the template"
-      />
+      <ul className="flex list-none flex-col gap-3">
+        <li>
+          <FeaturedCard {...lead} />
+        </li>
+        {rest.map((product) => (
+          <li key={product.name}>
+            <FeaturedCard {...product} variant="secondary" />
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }
