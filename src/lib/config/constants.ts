@@ -32,6 +32,7 @@ export const ODD_JOBS_REFERRAL_QUERY = from("link_hub");
 // My links
 export const SHOP_LINK = `https://www.timonwa.com/shop${from("shop")}`;
 export const SUPPORT_LINK = `https://www.timonwa.com/support${from("support")}`;
+export const CAREER_LINK = `https://www.timonwa.com/career${from("career")}`;
 
 // Support — third-party checkout platforms, untagged.
 export const SUPPORT_BUYMEACOFFEE = "https://www.buymeacoffee.com/timonwa";
@@ -40,7 +41,6 @@ export const SUPPORT_SELAR = "https://selar.co/showlove/timonwa";
 // Work-with-me resources — link to the vanity routes on the main site (which
 // redirect to the real Drive/Notion docs). The destination is maintained once
 // on www, so updating a redirect there updates every site automatically.
-export const RESOURCE_CV = `https://www.timonwa.com/t/cv${from("cv")}`;
 export const RESOURCE_PRESS_KIT = `https://www.timonwa.com/press-kit${from(
   "press_kit"
 )}`;
@@ -49,9 +49,6 @@ export const RESOURCE_PRESS_KIT = `https://www.timonwa.com/press-kit${from(
 // two are different things (my portfolio vs a product).
 export const RESOURCE_WRITER_PORTFOLIO = `https://www.timonwa.com/w/portfolio${from(
   "my_writing_portfolio"
-)}`;
-export const RESOURCE_RATE_CARD = `https://www.timonwa.com/w/rate-card${from(
-  "rate_card"
 )}`;
 
 // Blogs
